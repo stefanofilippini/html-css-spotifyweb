@@ -5,6 +5,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.mb-30 {
+    margin-bottom: 30px;
+}
+
 .mb-15 {
     margin-bottom: 15px;
 }
@@ -18,13 +22,6 @@ body {
     flex-direction: column;
 }
 
-main {
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 100px);
-    background-color: blue;
-    flex-grow: 1;
-}
 
 /* ASIDE */
 aside {
@@ -37,9 +34,10 @@ aside {
     padding: 10px;
 }
 
-.content {
+.main-content {
     flex-grow: 1;
     background-color: #141921;
+    overflow-y: auto;
 }
 
 .logo {
@@ -72,13 +70,15 @@ nav {
 h3 {
     color: #e1e1e1;
 }
+
 .playlist {
+    display: flex;
     color: #e1e1e1;
     flex-grow: 1;
     overflow-y: auto;
 }
 
-i {
+#create-playlist i {
     color: black;
     background-color: #a3a3a3;
     padding: 10px;
@@ -86,7 +86,7 @@ i {
     margin-right: 13px;
 }
 
-#Create-playlist {
+#create-playlist {
     text-decoration: none;
     color: #a3a3a3;
     display: flex;
@@ -125,6 +125,90 @@ i {
     border-radius: 50%;
     margin-right: 15px;
 }
+
+
+/* MAIN CONTENT */
+
+main {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: blue;
+    flex-grow: 1;
+}
+
+.header-section {
+    position: fixed;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: calc(100% - 230px);
+}
+
+.header-section a {
+    line-height: 70px;
+    text-decoration: none;
+    color: white;
+    border: solid 1px white;
+    padding: 11px 30px;
+    border-radius: 18px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.header-section div {
+    text-align: right;
+}
+
+.main-nav > ul {
+    margin: 90px auto 0px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: #7d7f84;
+    width: 40%;
+}
+
+.main-nav > ul > li {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.recently-played {
+    padding: 10px 20px;
+}
+
+.recently-played h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.recently-played ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.recently-played ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 7);
+    max-width: 200px;
+}
+
+.recently-played ul li img {
+    width: 100%;
+}
+
+.subtitle {
+    font-size: 10px;
+    color: #7d7f84;
+}
+
+.card-title {
+    color: white;
+}
+
 
 /* FOOTER */
 
